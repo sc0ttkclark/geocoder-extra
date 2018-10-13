@@ -84,7 +84,7 @@ class DataScienceToolkitProvider extends AbstractHttpProvider implements Provide
 
         $result = array_shift($result);
 
-        return array(array_merge($this->getDefaults(), array(
+        return $this->returnResults( array(array_merge($this->getDefaults(), array(
             'latitude'     => isset($result['latitude']) ? $result['latitude'] : null,
             'longitude'    => isset($result['longitude']) ? $result['longitude'] : null,
             'city'         => isset($result['locality']) ? $result['locality'] : null,
