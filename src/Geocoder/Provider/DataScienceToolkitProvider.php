@@ -84,7 +84,7 @@ class DataScienceToolkitProvider extends AbstractHttpProvider implements Provide
 
         $result = array_shift($result);
 
-        return $this->returnResults( array(array_merge($this->getDefaults(), array(
+        return $this->returnResults(array(array_merge($this->getDefaults(), array(
             'latitude'     => isset($result['latitude']) ? $result['latitude'] : null,
             'longitude'    => isset($result['longitude']) ? $result['longitude'] : null,
             'city'         => isset($result['locality']) ? $result['locality'] : null,
@@ -93,6 +93,6 @@ class DataScienceToolkitProvider extends AbstractHttpProvider implements Provide
             'zipcode'	   => isset($result['postal_code']) ? $result['postal_code'] : null,
             'streetName'   => isset($result['street_name']) ? $result['street_name'] : null,
             'streetNumber' => isset($result['street_number']) ? $result['street_number'] : null,
-        )));
+        ))));
     }
 }
